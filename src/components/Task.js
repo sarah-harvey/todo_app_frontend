@@ -5,7 +5,7 @@ class Task extends React.Component {
     render() {
         return (
             <div className="row">
-                <div className="col-12 col-md-10 green-rect input-group-mb-2">
+                <div className="col-10 col-md-10 green-rect input-group-mb-2">
                 <input type="checkbox"></input>
                 <div className="col-8">
                     {this.props.taskDescription}

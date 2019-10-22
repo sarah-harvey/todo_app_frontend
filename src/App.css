@@ -1,11 +1,10 @@
 .App {
   text-align: center;
 }
-.body {
+body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 5px;
-    background: url("/Images/blue_wish_background.jpg") no-repeat center;
-    background-size: cover;
+    background-image: url("./Images/blue_wish_background.jpg") no-repeat center;
     color: rgb(3, 57, 109);
   }
 
