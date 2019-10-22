@@ -1,11 +1,24 @@
 .App {
   text-align: center;
 }
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 5px;
+    /*background: url("blue_wish_background.jpg") no-repeat center;
+      background-size: cover;*/
+    color: rgb(3, 57, 109);
+  }
 
 .App-logo {
   height: 40vmin;
 }
 
+.header {
+
+  text-align: center;
+  font-size: 25pt;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -1,22 +1,23 @@
 import React from 'react';
 
-class Task extends React.Component {
+class Priority extends React.Component {
 
-    render() {
-        return (
-            <div className="container">
-            <div className="row">
+render()  {
+    return (
+        <div className="container">
+        <div className="row">
                 <div className="col-8">
-                    {this.props.taskDescription}
+                {this.props.priorityDescription}
                 </div>
                 <div className="col-2">
                 <button type="button" class="btn btn-danger btn-sm">Delete</button>
         </div>
         </div>
         </div>
-        );
-    }
+    );
+}
+
 
 }
 
-export default Task;
+export default Priority;
