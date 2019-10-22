@@ -4,7 +4,6 @@ class Task extends React.Component {
 
     render() {
         return (
-            <div className="container">
             <div className="row">
                 <div className="col-8">
                     {this.props.taskDescription}
@@ -13,7 +12,7 @@ class Task extends React.Component {
                 <button type="button" class="btn btn-danger btn-sm">Delete</button>
         </div>
         </div>
-        </div>
+        
         );
     }
 

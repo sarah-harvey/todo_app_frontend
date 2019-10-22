@@ -3,12 +3,17 @@ import './App.css';
 import Header from './components/Header';
 import Priority from './components/Priority';
 import Task from './components/Task';
+import Dropdown from './components/Dropdown';
+import AddTask from './components/AddTask';
 function App() {
   return (
     <div className="container">
 
    <Header />
    <Dropdown />
+   <br></br>
+   <AddTask />
+   <br></br>
    <Priority priorityDescription ="Finish layout for ToDo ToDay app"/>
    <Priority priorityDescription ="Book doctor's appointment"/>
    <br></br>
