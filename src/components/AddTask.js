@@ -2,22 +2,57 @@ import React from 'react';
 
 class AddTask extends React.Component {
 
-    render() {
-        return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-5">
-                        <input className="form control" type="text" placeholder="Type here..."></input>
-                    </div>
-                </div>
-                <div className="col-2">
-                    <button type="button" className="btn btn-primary">Add</button>
-                </div>
-            </div>
-
-        );
+    state = {
+        taskDescription: ""
     }
 
+    addTask = () => {
+        const task = {
+            id: 1,
+            taskDescription: this.state.taskDescription,
+            completed: false
+        }
+        if(this.state.taskDescription === "") {
+            alert("Enter a task");
+    }
+//utilise the function we passed down to this component
+    this.props.newTask(task);
+
+//clear out text for UX
+    this.setState({taskDescription: ""});
 }
+
+taskDescriptionChanged = (event) => {
+    let taskDescription = this.state.taskDescription;
+    taskDescription = event.target.value;
+    this.setState({taskDescription});
+}
+
+
+
+//alert("Added in App").JSON.stringify(task);
+
+
+
+
+
+
+render() {
+    return (
+            <div className="row">
+                <div className="col-12 col-md-10">
+                    <input className="form control" type="text" placeholder="Type here..."></input>
+                    value={this.state.taskDescription} 
+                    onChange={this.taskDescriptionChanged} >/
+                </div>
+            <div className="col-12 col-md-2">
+                <button type="button" className="btn btn-primary" onClick={this.addTask}>Add</button>
+            </div>
+        </div>
+
+    );
+}
+}
+
 
 export default AddTask;
