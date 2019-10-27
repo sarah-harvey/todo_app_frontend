@@ -7,11 +7,17 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
-    
+  
+taskRow {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 2px solid blue;
+}
   
   .container {
-    display: flexbox;
+    /*display: flexbox;*/
     flex-direction: column;
     justify-content: flex-start;
     display: -webkit-box;
@@ -30,7 +36,7 @@ header {
 }
 
 priority {
-  text-align: center;
+  text-align: right;
 }
 .App-link {
   color: #09d3ac;

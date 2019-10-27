@@ -40,7 +40,7 @@ taskDescriptionChanged = (event) => {
 render() {
     return (
             <div className="row">
-                <div className="col-10 col-md-12">
+                <div className="col-12">
                     <input className="form control" type="text" placeholder="Type here..."
                     value={this.state.taskDescription} 
                     onChange={this.taskDescriptionChanged} />
