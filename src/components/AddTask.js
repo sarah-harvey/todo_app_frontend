@@ -12,46 +12,46 @@ class AddTask extends React.Component {
             taskDescription: this.state.taskDescription,
             completed: false
         }
-        if(this.state.taskDescription === "") {
+        if (this.state.taskDescription === "") {
             alert("Enter a task");
+        }
+        //utilise the function we passed down to this component
+        this.props.newTask(task);
+
+        //clear out text for UX
+        this.setState({ taskDescription: "" });
     }
-//utilise the function we passed down to this component
-    this.props.newTask(task);
 
-//clear out text for UX
-    this.setState({taskDescription: ""});
-}
-
-taskDescriptionChanged = (event) => {
-    let taskDescription = this.state.taskDescription;
-    taskDescription = event.target.value;
-    this.setState({taskDescription});
-}
+    taskDescriptionChanged = (event) => {
+        let taskDescription = this.state.taskDescription;
+        taskDescription = event.target.value;
+        this.setState({ taskDescription });
+    }
 
 
 
-//alert("Added in App").JSON.stringify(task);
+    //alert("Added in App").JSON.stringify(task);
 
 
 
 
 
 
-render() {
-    return (
+    render() {
+        return (
             <div className="row">
                 <div className="col-12">
                     <input className="form control" type="text" placeholder="Type here..."
-                    value={this.state.taskDescription} 
-                    onChange={this.taskDescriptionChanged} />
+                        value={this.state.taskDescription}
+                        onChange={this.taskDescriptionChanged} />
                 </div>
-            <div className="col-md-2">
-                <button type="button" className="btn btn-primary" onClick={this.addTask}>Add</button>
+                <div className="col-md-2">
+                    <button type="button" className="btn btn-primary" onClick={this.addTask}>Add</button>
+                </div>
             </div>
-        </div>
 
-    );
-}
+        );
+    }
 }
 
 

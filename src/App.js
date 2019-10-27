@@ -12,33 +12,33 @@ import BackgroundImage from './components/BackgroundImage';
 class App extends React.Component {
 
   state = {
-      tasks: [
+    tasks: [
 
-      ]
+    ]
   }
 
   addTaskToList = (task) => {
-      let tasks = this.state.tasks;
+    let tasks = this.state.tasks;
 
-      tasks.push(task);
+    tasks.push(task);
 
-      this.setState({tasks});
+    this.setState({ tasks });
   }
   render() {
 
-  return (
-    <div className="container">
-      
-      <BackgroundImage />
-      <Header />
-      <Dropdown />
-      <br></br>
-      <AddTask newTask={this.addTaskToList} />
-      <br></br>
-      <Priority priorityDescription="Finish layout for ToDo ToDay app" />
-      <Priority priorityDescription="Book doctor's appointment"/>
-      <TaskCounter count={this.state.tasks.length} />
-      <TaskList tasks={this.state.tasks} />
+    return (
+      <div className="container">
+
+        <BackgroundImage />
+        <Header />
+        <Dropdown />
+        <br></br>
+        <AddTask newTask={this.addTaskToList} />
+        <br></br>
+        <Priority priorityDescription="Finish layout for ToDo ToDay app" />
+        <Priority priorityDescription="Book doctor's appointment" />
+        <TaskCounter count={this.state.tasks.length} />
+        <TaskList tasks={this.state.tasks} />
       </div>
 
       /*<Header />
@@ -56,10 +56,10 @@ class App extends React.Component {
       <Task taskDescription="Buy flowers for mum" />
       <Task taskDescription="Book haircut in time for birthday" />
     </div>*/
-  );
-  
-  
-}
+    );
+
+
+  }
 }
 
 export default App;
