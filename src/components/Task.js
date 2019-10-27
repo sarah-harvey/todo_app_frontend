@@ -8,7 +8,7 @@ class Task extends React.Component {
                 <div className="col-10 col-md-10 green-rect input-group-mb-2">
                     <input type="checkbox"></input>
                     <div className="col-8">
-                        {this.props.taskDescription}
+                    {this.props.task.taskDescription}
                     </div>
                     <div className="col-2">
                         <button type="button" class="btn btn-danger btn-sm">Delete</button>

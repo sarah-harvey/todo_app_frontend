@@ -10,7 +10,7 @@ body, html {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
-taskRow {
+.taskRow {
   padding-top: 10px;
   padding-bottom: 10px;
   border-top: 2px solid blue;

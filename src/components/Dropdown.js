@@ -6,7 +6,7 @@ class Dropdown extends React.Component {
         return (
             <div className="container">
                 <div className="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Tools
             </button>
