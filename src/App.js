@@ -7,6 +7,7 @@ import Dropdown from './components/Dropdown';
 import AddTask from './components/AddTask';
 import TaskCounter from './components/TaskCounter';
 import TaskList from './components/TaskList';
+import BackgroundImage from './components/BackgroundImage';
 
 class App extends React.Component {
 
@@ -28,6 +29,7 @@ class App extends React.Component {
   return (
     <div className="container">
       
+      <BackgroundImage />
       <Header />
       <Dropdown />
       <br></br>
@@ -55,6 +57,8 @@ class App extends React.Component {
       <Task taskDescription="Book haircut in time for birthday" />
     </div>*/
   );
+  
+  
 }
 }
 

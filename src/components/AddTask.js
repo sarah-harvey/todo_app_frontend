@@ -40,12 +40,12 @@ taskDescriptionChanged = (event) => {
 render() {
     return (
             <div className="row">
-                <div className="col-12 col-md-10">
-                    <input className="form control" type="text" placeholder="Type here..."></input>
+                <div className="col-10 col-md-12">
+                    <input className="form control" type="text" placeholder="Type here..."
                     value={this.state.taskDescription} 
-                    onChange={this.taskDescriptionChanged} >/
+                    onChange={this.taskDescriptionChanged} />
                 </div>
-            <div className="col-12 col-md-2">
+            <div className="col-md-2">
                 <button type="button" className="btn btn-primary" onClick={this.addTask}>Add</button>
             </div>
         </div>
