@@ -1,4 +1,5 @@
 import React from 'react';
+/*import AddIcon from '@material-ui/icons/Add';*/
 
 class AddTask extends React.Component {
 
@@ -41,7 +42,7 @@ class AddTask extends React.Component {
         return (
             <div className="row">
                 <div className="col-12">
-                    <input className="form control" type="text" placeholder="Type here..."
+                    <input className="form control" type="text" id="outlined-full-width" style={{ margin: 8 }} placeholder="Type here..."
                         value={this.state.taskDescription}
                         onChange={this.taskDescriptionChanged} />
                 </div>

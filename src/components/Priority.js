@@ -11,6 +11,9 @@ class Priority extends React.Component {
                         <div className="col-8">
                             {this.props.priorityDescription}
                         </div>
+                        <div className="col-3 col-md-3">
+                        <button type="button" class="btn btn-danger btn-sm">Done</button>
+                    </div>
                         <div className="col-2">
                             <button type="button" class="btn btn-danger btn-sm">Delete</button>
                         </div>
