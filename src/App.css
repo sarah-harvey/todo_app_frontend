@@ -41,3 +41,7 @@ priority {
 .App-link {
   color: #09d3ac;
 }
+
+.completedTask {
+  text-decoration: line-through;
+}

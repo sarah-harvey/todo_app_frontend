@@ -19,8 +19,8 @@ class App extends React.Component {
 
 
 
-      //{ text: "Order six bottles of gin", completed: false, date: "2019-09-20" },
-      //{ text: "Call Ryan Reynolds back", completed: true, date: "2019-09-18" },
+      { id: "uuidv4()", taskDescription: "Order six bottles of gin", completed: false},
+      { id: "uuidv4()", taskDescription:"Call Ryan Reynolds back", completed: true},
       //{ text: "Post letter to solicitor", completed: true, date: "2019-09-22" },
       //{ text: "Buy flowers for mum", completed: false, date: "2019-09-20" },
       //{ text: "Book haircut in time for birthday", completed: true, date: "2019-09-18" },
@@ -39,7 +39,16 @@ addTaskToList = (task) => {
   this.setState({ tasks });
 }
 deleteTask = (taskId) => {
-  alert(`App will delete task' ${taskId}`);
+  //alert(`App will delete task' ${taskId}`);
+  //This will be an array of tasks that are in state
+  let tasks = this.state.tasks;
+
+let filteredTasks = tasks.filter(function(task) {
+  return task.id !== taskId;
+
+});
+this.setState({tasks: filteredTasks});
+
 }
 
 render() {
@@ -70,11 +79,7 @@ render() {
     <Priority priorityDescription="Book doctor's appointment" />
     <br></br>
     <br></br>
-    <Task taskDescription="Order six bottles of gin" />
-    <Task taskDescription="Call Ryan Reynolds back" />
-    <Task taskDescription="Post letter to solicitor" />
-    <Task taskDescription="Buy flowers for mum" />
-    <Task taskDescription="Book haircut in time for birthday" />
+    
   </div>*/
   );
 
