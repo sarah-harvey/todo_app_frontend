@@ -13,6 +13,12 @@ class App extends React.Component {
 
   state = {
     tasks: [
+
+
+
+
+
+
       //{ text: "Order six bottles of gin", completed: false, date: "2019-09-20" },
       //{ text: "Call Ryan Reynolds back", completed: true, date: "2019-09-18" },
       //{ text: "Post letter to solicitor", completed: true, date: "2019-09-22" },
@@ -32,7 +38,9 @@ addTaskToList = (task) => {
 
   this.setState({ tasks });
 }
-
+deleteTask = (taskId) => {
+  alert(`App will delete task' ${taskId}`);
+}
 
 render() {
 
@@ -49,6 +57,7 @@ render() {
       <Priority priorityDescription="Book doctor's appointment" />
       <TaskCounter count={this.state.tasks.length} />
       <TaskList tasks={this.state.tasks} />
+      <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} />
       
     </div>
 

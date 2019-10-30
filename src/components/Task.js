@@ -7,8 +7,10 @@ mouseOver = () => {
     
 }
 deleteTask = () => {
-    alert("Are you sure?");
-    alert("this.props.task.id")
+
+    this.props.deleteTaskFunc(this.props.task.id);
+   // alert("Are you sure?");
+    //alert("this.props.task.id")
 }
     render() {
         return (
