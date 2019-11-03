@@ -1,11 +1,8 @@
 import React from 'react';
 
 class Task extends React.Component {
-    //what function you want mouseOver to do when mouse over Done button:
-    mouseOver = () => {
-        alert('Hello there');
-
-    }
+    
+    
     deleteTask = () => {
         this.props.deleteTaskFunc(this.props.task.id);
     }
@@ -33,7 +30,7 @@ class Task extends React.Component {
                     </div>
                 }
                 <div className="col-6 col-md-3">
-                    <button type="button" class="btn btn-danger btn-sm" onMouseOver={this.mouseOver}>
+                    <button type="button" class="btn btn-danger btn-sm" onClick={this.props.task.completed}>
                         Done
                     </button>
                 </div>
