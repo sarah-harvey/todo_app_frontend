@@ -65,7 +65,6 @@ render() {
       <Priority priorityDescription="Finish layout for ToDo ToDay app" />
       <Priority priorityDescription="Book doctor's appointment" />
       <TaskCounter count={this.state.tasks.length} />
-      <TaskList tasks={this.state.tasks} />
       <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} />
       
     </div>
