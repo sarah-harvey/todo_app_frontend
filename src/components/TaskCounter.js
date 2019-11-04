@@ -5,7 +5,7 @@ class TaskCounter extends React.Component {
         return (
             <div className="row d-none d-md-block">
                 <div className="col">
-                    You have {this.props.count} tasks remaining
+                    You have {this.props.count} tasks outstanding
             </div>
             </div>
         );

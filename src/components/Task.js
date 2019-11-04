@@ -1,8 +1,8 @@
 import React from 'react';
 
 class Task extends React.Component {
-    
-    
+
+
     deleteTask = () => {
         this.props.deleteTaskFunc(this.props.task.id);
     }
@@ -34,14 +34,15 @@ class Task extends React.Component {
                         Done
                     </button>
                 </div>
-        
+
                 <div className="col-6 col-md-3">
                     <button type="button" class="btn btn-danger btn-sm" onClick={this.deleteTask}>
                         Delete
                     </button>
-                    </div>
                 </div>
-        )}
+            </div>
+        )
+    }
 }
 
 export default Task;

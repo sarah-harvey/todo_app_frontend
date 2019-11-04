@@ -31,7 +31,7 @@ class App extends React.Component {
 
     tasks.push(task);
 
-    this.setState({tasks});
+    this.setState({ tasks });
   }
   deleteTask = (taskId) => {
     alert(`App will delete task' ${taskId}`);
@@ -42,7 +42,7 @@ class App extends React.Component {
       return task.id !== taskId;
 
     });
-    this.setState({tasks: filteredTasks});
+    this.setState({ tasks: filteredTasks });
 
   }
 
@@ -53,6 +53,7 @@ class App extends React.Component {
 
         <BackgroundImage />
         <Header />
+        <Task />
         <br></br>
         <AddTask newTask={this.addTaskToList} />
         <br></br>
@@ -62,7 +63,7 @@ class App extends React.Component {
 
       </div>
 
-     
+
       /*<Priority priorityDescription="Finish layout for ToDo ToDay app" />
       <Priority priorityDescription="Book doctor's appointment" />
       <br></br>

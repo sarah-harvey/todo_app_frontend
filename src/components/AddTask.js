@@ -1,5 +1,5 @@
 import React from 'react';
-/*import AddIcon from '@material-ui/icons/Add';*/
+
 const uuidv4 = require('uuid/v4');
 
 class AddTask extends React.Component {
@@ -14,14 +14,14 @@ class AddTask extends React.Component {
             taskDescription: this.state.taskDescription,
             completed: false
         }
-       // if (this.state.taskDescription === "") {
-         //   alert("Enter a task");
-       // }
+        // if (this.state.taskDescription === "") {
+        //   alert("Enter a task");
+        // }
         //utilise the function we passed down to this component
         this.props.newTask(task);
 
         //clear out text for UX
-        this.setState({taskDescription: ""});
+        this.setState({ taskDescription: "" });
     }
 
     taskDescriptionChanged = (event) => {
@@ -29,7 +29,7 @@ class AddTask extends React.Component {
 
         taskDescription = event.target.value;
 
-        this.setState({taskDescription});
+        this.setState({ taskDescription });
     }
 
 
@@ -45,7 +45,7 @@ class AddTask extends React.Component {
         return (
             <div className="row">
                 <div className="col-12">
-                    <input className="form control" type="text" placeholder="Make notes here..." id="outlined-full-width" style={{ margin: 8 }} placeholder="Type here..."
+                    <input className="form control" type="text" id="outlined-full-width" style={{ margin: 8 }} placeholder="Enter your notes here..."
                         value={this.state.taskDescription}
                         onChange={this.taskDescriptionChanged} />
                 </div>
