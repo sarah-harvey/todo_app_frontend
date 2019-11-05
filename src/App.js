@@ -1,13 +1,14 @@
 import React from 'react';
 import "./App.css";
 import Header from './components/Header';
-import Priority from './components/Priority';
+//import Priority from './components/Priority';
 import Task from './components/Task';
 //import Dropdown from './components/Dropdown';
 import AddTask from './components/AddTask';
 import TaskCounter from './components/TaskCounter';
 import TaskList from './components/TaskList';
 import BackgroundImage from './components/BackgroundImage';
+const uuidv4 = require('uuid/v4');
 
 class App extends React.Component {
 
@@ -15,11 +16,11 @@ class App extends React.Component {
     tasks: [
 
 
-      { taskId: "uuidv4()", taskDescription: "Order six bottles of gin", completed: false },
-      { taskId: "uuidv4()", taskDescription: "Call Ryan Reynolds back", completed: false },
-      { taslId: "uuidv4()", taskDescription: "Post letter to solicitor", completed: true, date: "2019-09-22" },
-      { taskId: "uuidv4()", taskDescription: "Buy flowers for mum", completed: false, date: "2019-09-20" },
-      { taskId: "uuidv4()", taskDescription: "Book haircut in time for birthday", completed: true, date: "2019-09-18" },
+      { id: uuidv4(), taskDescription: "Order six bottles of gin", completed: false },
+      { id: uuidv4(), taskDescription: "Call Ryan Reynolds back", completed: false },
+      { id: uuidv4(), taskDescription: "Post letter to solicitor", completed: true, date: "2019-09-22" },
+      { id: uuidv4(), taskDescription: "Buy flowers for mum", completed: true, date: "2019-09-20" },
+      { id: uuidv4(), taskDescription: "Book haircut in time for birthday", completed: true, date: "2019-09-18" },
 
     ]
 
@@ -40,10 +41,9 @@ class App extends React.Component {
 
     let filteredTasks = tasks.filter(function (task) {
       return task.id !== taskId;
-
     });
-    this.setState({ tasks: filteredTasks });
 
+    this.setState({ tasks: filteredTasks });
   }
 
   render() {
@@ -53,7 +53,6 @@ class App extends React.Component {
 
         <BackgroundImage />
         <Header />
-        <Task />
         <br></br>
         <AddTask newTask={this.addTaskToList} />
         <br></br>
@@ -62,17 +61,7 @@ class App extends React.Component {
         <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} />
 
       </div>
-
-
-      /*<Priority priorityDescription="Finish layout for ToDo ToDay app" />
-      <Priority priorityDescription="Book doctor's appointment" />
-      <br></br>
-      <br></br>
-      
-    </div>*/
     );
-
-
   }
 }
 

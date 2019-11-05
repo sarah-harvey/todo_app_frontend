@@ -14,9 +14,9 @@ class AddTask extends React.Component {
             taskDescription: this.state.taskDescription,
             completed: false
         }
-        // if (this.state.taskDescription === "") {
-        //   alert("Enter a task");
-        // }
+        if (this.state.taskDescription === "") {
+          alert("Enter a task");
+         }
         //utilise the function we passed down to this component
         this.props.newTask(task);
 
