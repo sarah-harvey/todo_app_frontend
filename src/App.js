@@ -21,7 +21,6 @@ class App extends React.Component {
       { id: uuidv4(), taskDescription: "Post letter to solicitor", completed: true, date: "2019-09-22" },
       { id: uuidv4(), taskDescription: "Buy flowers for mum", completed: true, date: "2019-09-20" },
       { id: uuidv4(), taskDescription: "Book haircut in time for birthday", completed: true, date: "2019-09-18" },
-
     ]
 
 
@@ -53,18 +52,17 @@ class App extends React.Component {
     let tasks = this.state.tasks;
 
     let filteredTasks = tasks.filter(function (task) {
-
-      if (task.id === taskId) {
-        let matchingTask = filteredTasks[0];
-        result = true;
-
-
-
-        // Put array of tasks back in state
-        this.setState({ tasks: filteredTasks });
-      }
-    }
+      return task.id === taskId;
+    });
+    // if (task.id === taskId) {
+    let matchingTask = filteredTasks[0];
+    return [true];
+  
+    // Put array of tasks back in state
+    this.setState({ tasks: filteredTasks });
   }
+
+
 
   render() {
 
@@ -80,13 +78,9 @@ class App extends React.Component {
         <br></br>
         <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} taskCompletedFunc={this.taskCompleted} />
       </div>
-    }
+    
+    )};
 }
 
 
 export default App;
-//this.handleClick = this.handleClick.bind(this);
-//for (let I = 0; I < taskList.length; I++) {
- // const taskId = taskList[I];
-//  if (task.id === taskId) {
-//<TaskList tasks={this.state.tasks} taskCompletedFunc={this.taskCompleted} />
