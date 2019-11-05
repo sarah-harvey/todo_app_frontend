@@ -47,13 +47,29 @@ class App extends React.Component {
     this.setState({ tasks: filteredTasks });
   }
 
-taskCompleted = (taskId) => {
+  taskCompleted = (taskId) => {
     alert(`App will mark task Done ${taskId}`);
-}
+    //Get array of tasks from state
+    let tasks = this.state.tasks;
+
+    let filteredTasks = tasks.filter(function (task) {
+
+      if (task.id === taskId) {
+        let matchingTask = filteredTasks[0];
+        result = true;
+
+
+
+        // Put array of tasks back in state
+        this.setState({ tasks: filteredTasks });
+      }
+    }
+  }
+
   render() {
 
     return (
-      <div className="container">
+      <div className="container" >
 
         <BackgroundImage />
         <Header />
@@ -63,12 +79,14 @@ taskCompleted = (taskId) => {
         <TaskCounter count={this.state.tasks.length} />
         <br></br>
         <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} taskCompletedFunc={this.taskCompleted} />
-        
-
       </div>
-    );
-  }
+    }
 }
 
+
 export default App;
+//this.handleClick = this.handleClick.bind(this);
+//for (let I = 0; I < taskList.length; I++) {
+ // const taskId = taskList[I];
+//  if (task.id === taskId) {
 //<TaskList tasks={this.state.tasks} taskCompletedFunc={this.taskCompleted} />
