@@ -34,8 +34,9 @@ class App extends React.Component {
 
     this.setState({ tasks });
   }
+
   deleteTask = (taskId) => {
-    alert(`App will delete task' ${taskId}`);
+    alert(`App will delete task ${taskId}`);
     //This will be an array of tasks that are in state
     let tasks = this.state.tasks;
 
@@ -46,6 +47,17 @@ class App extends React.Component {
     this.setState({ tasks: filteredTasks });
   }
 
+taskCompleted = (taskId) => {
+    alert(`App will mark task Done ${taskId}`);
+
+    let tasks = this.state.tasks;
+
+    let filteredTasks = tasks.filter(function (task) {
+      return task.id === task.Id;
+    });
+
+    this.setState({ tasks: filteredTasks });
+}
   render() {
 
     return (
@@ -58,7 +70,8 @@ class App extends React.Component {
         <br></br>
         <TaskCounter count={this.state.tasks.length} />
         <br></br>
-        <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} />
+        <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} taskCompletedFunc={this.taskCompleted} />
+        
 
       </div>
     );
@@ -66,3 +79,4 @@ class App extends React.Component {
 }
 
 export default App;
+//<TaskList tasks={this.state.tasks} taskCompletedFunc={this.taskCompleted} />
