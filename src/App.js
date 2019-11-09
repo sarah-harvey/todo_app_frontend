@@ -52,11 +52,13 @@ class App extends React.Component {
     let tasks = this.state.tasks;
 
     let filteredTasks = tasks.filter(function (task) {
-      return task.id === taskId;
+      if(task.id === taskId) {
+        return [0];
+      }
     });
     // if (task.id === taskId) {
-    let matchingTask = filteredTasks[0];
-    return [true];
+    //let matchingTask = filteredTasks [0];
+  //  return true;
   
     // Put array of tasks back in state
     this.setState({ tasks: filteredTasks });
