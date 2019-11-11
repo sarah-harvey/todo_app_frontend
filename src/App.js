@@ -55,9 +55,9 @@ class App extends React.Component {
       if(task.id === taskId) {
         return [0];
       }
-      let matchingTask = filteredTasks [0];
+      //let matchingTask = filteredTasks [0];
     });
-
+    
     // if (task.id === taskId) {
     //let matchingTask = filteredTasks [0];
   //  return true;
