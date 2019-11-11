@@ -47,7 +47,7 @@ class App extends React.Component {
   }
 
   taskCompleted = (taskId) => {
-    alert(`App will mark task Done ${taskId}`);
+    alert(`App will mark task completed ${taskId}`);
     //Get array of tasks from state
     let tasks = this.state.tasks;
 
@@ -55,7 +55,9 @@ class App extends React.Component {
       if(task.id === taskId) {
         return [0];
       }
+      //let matchingTask = filteredTasks [0];
     });
+
     // if (task.id === taskId) {
     //let matchingTask = filteredTasks [0];
   //  return true;

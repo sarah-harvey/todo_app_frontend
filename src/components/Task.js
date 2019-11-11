@@ -11,7 +11,7 @@ class Task extends React.Component {
     render() {
 
         const completed = this.props.task.completed;
-            
+   //this.props.taskCompletedFunc(this.taskId)       
     
         return (
             <div className="row taskRow">
