@@ -47,7 +47,7 @@ class App extends React.Component {
   }
 
   taskCompleted = (taskId) => {
-    alert(`App will mark task completed ${taskId}`);
+    alert(`App will mark task as completed ${taskId}`);
     //Get array of tasks from state
     let tasks = this.state.tasks;
 
