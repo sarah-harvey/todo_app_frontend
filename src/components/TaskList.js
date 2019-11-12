@@ -11,12 +11,12 @@ class TaskList extends React.Component {
                 })
                 }
             </div>
-           // <div>
-            //    {this.props.tasks.map((taskId, index)) => {
-                //    return <Task taskCompletedFunc={this.props.taskCompletedFunc} />;
-              //  })
+            // <div>
+            //    {this.props.tasks.map((task, index)) => {
+            //    return <Task taskCompletedFunc={this.props.taskCompletedFunc} />;
+            //  })
             //    }
-         //   </div>
+            //   </div>
         );
     }
 }

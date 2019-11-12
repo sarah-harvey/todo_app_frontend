@@ -46,45 +46,63 @@ class App extends React.Component {
     this.setState({ tasks: filteredTasks });
   }
 
+
   taskCompleted = (taskId) => {
     alert(`App will mark task as completed ${taskId}`);
-    //Get array of tasks from state
-    let tasks = this.state.tasks;
-
-    let filteredTasks = tasks.filter(function (task) {
-      if(task.id === taskId) {
-        return [0];
+    constructor(props); {
+      super(props);
+      this.state.tasks.filter(function (task) {
+        //var filteredTasks = tasks.map(function (task, index) {
+        if (task.id === taskId) {
+          task.completed = true;
+        }
       }
-      let matchingTask = filteredTasks [0];
-    });
-    
+
+      );
+      //Get array of tasks from state
+      //let tasks = this.state.tasks;
+      // Put array of tasks back in state
+      this.setState({ tasks: filteredTasks });
+
+    }
+
+    //this bit worked but without taskId and not using matching task line
+    //taskCompleted = (taskId)
+    // let filteredTasks = tasks.filter(function (task) {
+    // if(task.id === taskId) {
+    //    return true 
+
+    //  let matchingTask = filteredTasks [0];
+
+
     // if (task.id === taskId) {
     //let matchingTask = filteredTasks [0];
-  //  return true;
-  
+    //  return true;
+
     // Put array of tasks back in state
-    this.setState({ tasks: filteredTasks });
+    //this.setState({ tasks: filteredTasks });
+
   }
 
 
+    render() {
 
-  render() {
+      return (
+        <div className="container" >
 
-    return (
-      <div className="container" >
+          <BackgroundImage />
+          <Header />
+          <br></br>
+          <AddTask newTask={this.addTaskToList} />
+          <br></br>
+          <TaskCounter count={this.state.tasks.length} />
+          <br></br>
+          <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} taskCompletedFunc={this.taskCompleted} />
+        </div>
 
-        <BackgroundImage />
-        <Header />
-        <br></br>
-        <AddTask newTask={this.addTaskToList} />
-        <br></br>
-        <TaskCounter count={this.state.tasks.length} />
-        <br></br>
-        <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} taskCompletedFunc={this.taskCompleted} />
-      </div>
-    
-    )};
-}
+      )
+    };
+  }
 
 
-export default App;
+  export default App;

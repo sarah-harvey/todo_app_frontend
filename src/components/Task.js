@@ -6,13 +6,13 @@ class Task extends React.Component {
         this.props.deleteTaskFunc(this.props.task.id);
     }
     taskCompleted = () => {
-        this.props.taskCompletedFunc(this.taskId);
+        this.props.taskCompletedFunc(this.props.taskId);
     }
     render() {
 
         const completed = this.props.task.completed;
-   //this.props.taskCompletedFunc(this.taskId)       
-    
+        //this.props.taskCompletedFunc(this.taskId)       
+
         return (
             <div className="row taskRow">
                 {completed &&
