@@ -47,62 +47,71 @@ class App extends React.Component {
   }
 
 
-  taskCompleted = (taskId) => {
+  completedTasks =
     alert(`App will mark task as completed ${taskId}`);
-    constructor(props); {
-      super(props);
-      this.state.tasks.filter(function (task) {
-        //var filteredTasks = tasks.map(function (task, index) {
-        if (task.id === taskId) {
-          task.completed = true;
-        }
+  constructor(props) {
+    super(props);
+    this.state.tasks.filter(function (task) {
+      if (task.id === taskId) {
+        //Var filteredTasks = tasks.filter(function(task, index) {
+        let task = completedTasks[0];
+
+        return taskCompleted = true;
       }
-
-      );
-      //Get array of tasks from state
-      //let tasks = this.state.tasks;
-      // Put array of tasks back in state
-      this.setState({ tasks: filteredTasks });
-
-    }
-
-    //this bit worked but without taskId and not using matching task line
-    //taskCompleted = (taskId)
-    // let filteredTasks = tasks.filter(function (task) {
-    // if(task.id === taskId) {
-    //    return true 
-
-    //  let matchingTask = filteredTasks [0];
+    });
 
 
-    // if (task.id === taskId) {
-    //let matchingTask = filteredTasks [0];
-    //  return true;
-
+    //this.state.tasks.props(function (task) {
+        //var filteredTasks = tasks.map(function (task, index) {
+       // if (task.id === taskId) {
+       //   task.completed = true;
+      //  }
+    //  }
+    //Get array of tasks from state
+    //let tasks = this.state.tasks;
     // Put array of tasks back in state
-    //this.setState({ tasks: filteredTasks });
+    this.setState({ tasks: filteredTasks });
 
   }
 
 
-    render() {
+  //this bit worked but without taskId and not using matching task line
+  //taskCompleted = (taskId)
+  // let filteredTasks = tasks.filter(function (task) {
+  // if(task.id === taskId) {
+  //    return true 
 
-      return (
-        <div className="container" >
+  //  let matchingTask = filteredTasks [0];
 
-          <BackgroundImage />
-          <Header />
-          <br></br>
-          <AddTask newTask={this.addTaskToList} />
-          <br></br>
-          <TaskCounter count={this.state.tasks.length} />
-          <br></br>
-          <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} taskCompletedFunc={this.taskCompleted} />
-        </div>
 
-      )
-    };
+  // if (task.id === taskId) {
+  //let matchingTask = filteredTasks [0];
+  //  return true;
+
+  // Put array of tasks back in state
+  //this.setState({ tasks: filteredTasks });
+
+
+
+
+render() {
+
+  return (
+    <div className="container" >
+
+      <BackgroundImage />
+      <Header />
+      <br></br>
+      <AddTask newTask={this.addTaskToList} />
+      <br></br>
+      <TaskCounter count={this.state.tasks.length} />
+      <br></br>
+      <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} taskCompletedFunc={this.taskCompleted} />
+    </div>
+
+  )
+};
   }
 
 
-  export default App;
+export default App;
