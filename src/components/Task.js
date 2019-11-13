@@ -5,8 +5,8 @@ class Task extends React.Component {
     deleteTask = () => {
         this.props.deleteTaskFunc(this.props.task.id);
     }
-    taskCompleted = () => {
-        this.props.taskCompletedFunc(this.props.taskId);
+    markTaskCompleted = () => {
+        this.props.markTaskCompletedFunc(this.props.taskId);
     }
     render() {
 
@@ -27,7 +27,7 @@ class Task extends React.Component {
                     </div>
                 }
                 <div className="col-6 col-md-3">
-                    <button type="button" class="btn btn-danger btn-sm" onClick={this.taskCompleted}>
+                    <button type="button" class="btn btn-danger btn-sm" onClick={this.markTaskCompleted}>
                         Done
                     </button>
                 </div>

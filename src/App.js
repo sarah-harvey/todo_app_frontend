@@ -45,35 +45,27 @@ class App extends React.Component {
 
     this.setState({ tasks: filteredTasks });
 
-  
+
 
     markTaskCompleted = (taskId) => {
       alert(`App will mark task as completed ${taskId}`);
       // Get an array of tasks from state
       let tasks = this.state.tasks;
+      
       // Use filter to identify the task that is being marked as completed and allocate to a variable
       this.state.tasks.filter(function (task) {
         if (task.id === taskId) {
           // Update task and set the property to true
           let task = completedTasks[0];
-          return taskCompleted = true;
+          return markTaskCompleted = true;
         };
       });
     }
 
-        //this.state.tasks.props(function (task) {
-        //var filteredTasks = tasks.map(function (task, index) {
-        // if (task.id === taskId) {
-        //   task.completed = true;
-        //  }
-        //  }
-        //Get array of tasks from state
-        //let tasks = this.state.tasks;
 
-        // Put array of tasks back in state
-        this.setState({ tasks: filteredTasks });
+    this.setState({ tasks: filteredTasks });
 
-      }
+  }
 
 
   //this bit worked but without taskId and not using matching task line
@@ -97,22 +89,22 @@ class App extends React.Component {
 
   render() {
 
-        return(
-      <div className = "container" >
+    return (
+      <div className="container" >
 
-            <BackgroundImage />
-            <Header />
-            <br></br>
-            <AddTask newTask={this.addTaskToList} />
-            <br></br>
-            <TaskCounter count={this.state.tasks.length} />
-            <br></br>
-            <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} taskCompletedFunc={this.taskCompleted} />
+        <BackgroundImage />
+        <Header />
+        <br></br>
+        <AddTask newTask={this.addTaskToList} />
+        <br></br>
+        <TaskCounter count={this.state.tasks.length} />
+        <br></br>
+        <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} taskCompletedFunc={this.taskCompleted} />
       </div>
 
     )
-    };
-  }
+  };
+}
 
 
-  export default App;
+export default App;
