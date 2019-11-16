@@ -7,16 +7,11 @@ class TaskList extends React.Component {
         return (
             <div>
                 {this.props.tasks.map((task, index) => {
-                    return <Task deleteTaskFunc={this.props.deleteTaskFunc} task={task} key={index} markTaskCompletedFunc={this.props.markTaskCompletedFunc} />;
+                    return <Task deleteTaskFunc={this.props.deleteTaskFunc} markTaskCompletedFunc={this.props.markTaskCompletedFunc} task={task} key={index} />;
                 })
                 }
             </div>
-           // <div>
-            //    {this.props.tasks.map((task, index)) => {
-             //       return <Task taskCompletedFunc={this.props.taskCompletedFunc} />;
-          //  })
-           //     }
-           //   </div>
+
         );
     }
 }

@@ -6,22 +6,22 @@ class Task extends React.Component {
         this.props.deleteTaskFunc(this.props.task.id);
     }
     markTaskCompleted = () => {
-        this.props.markTaskCompletedFunc(this.props.taskId);
+        this.props.markTaskCompletedFunc(this.props.task.id);
     }
     render() {
 
-        const completed = this.props.task.completed;
-        //this.props.taskCompletedFunc(this.taskId)       
+        const markTaskCompleted = this.props.task.completed;
+        //this.props.taskCompletedFunc(this.task.id)       
 
         return (
             <div className="row taskRow">
-                {completed &&
+                {markTaskCompleted &&
                     <div className="col-12 col-md-6 completedTask">
                         {this.props.task.taskDescription}
                     </div>
 
                 }
-                {!completed &&
+                {!markTaskCompleted &&
                     <div className="col-12 col-md-6">
                         {this.props.task.taskDescription}
                     </div>

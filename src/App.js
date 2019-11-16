@@ -2,7 +2,7 @@ import React from 'react';
 import "./App.css";
 import Header from './components/Header';
 //import Priority from './components/Priority';
-import Task from './components/Task';
+//import Task from './components/Task';
 //import Dropdown from './components/Dropdown';
 import AddTask from './components/AddTask';
 import TaskCounter from './components/TaskCounter';
@@ -18,9 +18,9 @@ class App extends React.Component {
 
       { id: uuidv4(), taskDescription: "Order six bottles of gin", completed: false },
       { id: uuidv4(), taskDescription: "Call Ryan Reynolds back", completed: false },
-      { id: uuidv4(), taskDescription: "Post letter to solicitor", completed: true, date: "2019-09-22" },
-      { id: uuidv4(), taskDescription: "Buy flowers for mum", completed: true, date: "2019-09-20" },
-      { id: uuidv4(), taskDescription: "Book haircut in time for birthday", completed: true, date: "2019-09-18" },
+      { id: uuidv4(), taskDescription: "Post letter to solicitor", completed: true },
+      { id: uuidv4(), taskDescription: "Buy flowers for mum", completed: true },
+      { id: uuidv4(), taskDescription: "Book haircut in time for birthday", completed: true },
     ]
 
 
@@ -44,26 +44,29 @@ class App extends React.Component {
     });
 
     this.setState({ tasks: filteredTasks });
+  }
 
 
 
     markTaskCompleted = (taskId) => {
       alert(`App will mark task as completed ${taskId}`);
       // Get an array of tasks from state
-      let tasks = this.state.tasks;
+      //let tasks = this.state.tasks;
       
       // Use filter to identify the task that is being marked as completed and allocate to a variable
-      this.state.tasks.filter(function (task) {
+      const markTaskCompleted = this.state.tasks.map(task => {
         if (task.id === taskId) {
           // Update task and set the property to true
-          let task = completedTasks[0];
-          return markTaskCompleted = true;
-        };
-      });
-    }
+          task.completed = true;
+          // return taskCompleted = true;
+        }
+        return task;
+        });
+      
+    
+      // return the task, which may or may not have been updated
 
-
-    this.setState({ tasks: filteredTasks });
+    this.setState({ tasks: markTaskCompleted });
 
   }
 
@@ -99,7 +102,7 @@ class App extends React.Component {
         <br></br>
         <TaskCounter count={this.state.tasks.length} />
         <br></br>
-        <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} taskCompletedFunc={this.taskCompleted} />
+        <TaskList tasks={this.state.tasks} deleteTaskFunc={this.deleteTask} markTaskCompletedFunc={this.markTaskCompleted} />
       </div>
 
     )
