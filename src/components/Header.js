@@ -6,7 +6,7 @@ class Header extends React.Component {
     return (
       <div className="col">
         <div className="row pb-3 mb-3">
-          <div className="col-8 text-align:center">
+          <div className="col -8 text-align:center">
             <p>{new Date().toDateString()}</p>
           </div>
         </div>

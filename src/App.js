@@ -35,7 +35,7 @@ class App extends React.Component {
   }
 
   deleteTask = (taskId) => {
-    alert(`App will delete task ${taskId}`);
+    alert(`Are you sure you want to delete this task? ${taskId}`);
     //This will be an array of tasks that are in state
     let tasks = this.state.tasks;
 
@@ -48,47 +48,22 @@ class App extends React.Component {
 
 
 
-    markTaskCompleted = (taskId) => {
-      alert(`App will mark task as completed ${taskId}`);
-      // Get an array of tasks from state
-      //let tasks = this.state.tasks;
-      
-      // Use filter to identify the task that is being marked as completed and allocate to a variable
-      const markTaskCompleted = this.state.tasks.map(task => {
-        if (task.id === taskId) {
-          // Update task and set the property to true
-          task.completed = true;
-          // return taskCompleted = true;
-        }
-        return task;
-        });
-      
-    
-      // return the task, which may or may not have been updated
+  markTaskCompleted = (taskId) => {
+    alert(`App will mark task as completed ${taskId}`);
+    // Get an array of tasks from state
 
+    // Use filter to identify the task that is being marked as completed and allocate to a variable
+    const markTaskCompleted = this.state.tasks.map(task => {
+      if (task.id === taskId) {
+        // Update task and set the property to true
+        task.completed = true;
+        // return taskCompleted = true;
+      }
+      return task;
+    });
+    // return the task, which may or may not have been updated
     this.setState({ tasks: markTaskCompleted });
-
   }
-
-
-  //this bit worked but without taskId and not using matching task line
-  //taskCompleted = (taskId)
-  // let filteredTasks = tasks.filter(function (task) {
-  // if(task.id === taskId) {
-  //    return true 
-
-  //  let matchingTask = filteredTasks [0];
-
-
-  // if (task.id === taskId) {
-  //let matchingTask = filteredTasks [0];
-  //  return true;
-
-  // Put array of tasks back in state
-  //this.setState({ tasks: filteredTasks });
-
-
-
 
   render() {
 

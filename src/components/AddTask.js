@@ -21,7 +21,7 @@ class AddTask extends React.Component {
         this.props.newTask(task);
 
         //clear out text for UX
-        this.setState({taskDescription: "" });
+        this.setState({ taskDescription: "" });
     }
 
     taskDescriptionChanged = (event) => {

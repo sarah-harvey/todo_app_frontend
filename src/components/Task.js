@@ -42,8 +42,5 @@ class Task extends React.Component {
     }
 
 }
-//onClick={this.props.task.completed}
-//<input type="checkbox"></input>
-//<div className="col-6 col-md-3">
-//
+
 export default Task;
