@@ -83,6 +83,16 @@ class App extends React.Component {
     )
   };
 }
+//deleteTask = (taskId) => {
+ // alert(`Are you sure you want to delete this task? ${taskId}`);
+  //This will be an array of tasks that are in state
+//  let tasks = this.state.tasks;
 
+ // let filteredTasks = tasks.filter(function (task) {
+ //   return task.id !== taskId;
+ // });
+//
+ // this.setState({ tasks: filteredTasks });
+//}
 
 export default App;
