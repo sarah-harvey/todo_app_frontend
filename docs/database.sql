@@ -17,12 +17,15 @@
 |      5 |
 +--------+
 current
+
 +--------------------------------------+-----------+-----------------------------------+--------+
 | taskId                               | completed | text                              | userId |
 +--------------------------------------+-----------+-----------------------------------+--------+
-| 330371d1-3157-48cd-8de1-5dc44f473269 |         1 | Call Ryan Reynolds back           |      1 |
+| 0c1b3c0f-5a74-467e-8bfc-a936c5ff2adb |         0 | Book new piercing for birthday    |      1 |
+| 330371d1-3157-48cd-8de1-5dc44f473269 |         0 | Call Ryan Reynolds back           |      1 |
 | 49015aa4-6a48-4998-9cb0-97ee60a7cca7 |         1 | Book haircut in time for birthday |      1 |
 | 512f3f1f-ba63-410e-a096-b6053e9e364a |         1 | Post letter to solicitor          |      1 |
+| 712f06b2-31a5-4c04-9492-da78704851df |         0 | Order 4 bottles of gin            |      1 |
 | cc679118-b45b-4393-96fe-913278e3a9f7 |         1 | Buy more calpol                   |      1 |
 +--------------------------------------+-----------+-----------------------------------+--------+
 
