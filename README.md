@@ -18,7 +18,10 @@ This project uses the following technology:
  
 It has been designed and built with *mobile-first* reponsive principles in mind.
 
-(https:sarah-harvey.github.io/todo_app_frontend/src/Images/mobile-first-approach.png "Image of mobile, tablet and desktop")
+Mobile first approach: 
+![alt-text][image]
+
+[image]: https:sarah-harvey.github.io/todo_app_frontend/src/Images/mobile-first-approach.png "Image of mobile, tablet and desktop"
 
 Running the application locally
 Node.js must be installed if not already.
