@@ -1,22 +1,23 @@
 Todo Application - Frontend
 
-This is the front end of a Todo Application, built throughout the Tech Returners Your Journey Into Tech course. It integrates with a backend, available here.
+This is the front end of a Todo Application, built throughout the [Tech Returners]<https://www.techreturners.com/your-journey-into-tech> Your Journey Into Tech course. It integrates with a backend, available here: https://sarah-harvey.github.io/todo_app_backend
 
-The hosted version of the application is available here: "https://sarah-harvey.github.io/todo_app_frontend"
+The hosted version of the application is available here: https://sarah-harvey.github.io/todo_app_frontend
 
-Technology Used
+##Technology Used
+
 This project uses the following technology:
 
- - ReactJS
- - JavaScript (ES2015+)
- - CSS
- - Webpack
- - Axios
- - ESLint
+ * ReactJS
+ * JavaScript (ES2015+)
+ * CSS
+ * Webpack
+ * Axios
+ * ESLint
  
 It has been designed and built with mobile-first reponsive principles in mind.
 
-(Maybe add photos here of different device sizes?)
+![alt text](https:sarah-harvey.github.io/todo_app_frontend/src/Images/mobile-first-approach-3.png "Image of mobile, tablet and desktop")
 
 Running the application locally
 Node.js must be installed if not already.
