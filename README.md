@@ -19,7 +19,6 @@ This project uses the following technology:
 It has been designed and built with *mobile-first* reponsive principles in mind.
 
 Mobile first approach: 
-![alt-text][image]
 
 [image]: https:sarah-harvey.github.io/todo_app_frontend/src/Images/mobile-first-approach.png "Image of mobile, tablet and desktop"
 
