@@ -5,31 +5,31 @@ const uuidv4 = require('uuid/v4');
 class AddTask extends React.Component {
 
     state = {
-        taskDescription: ""
+        text: ""
     }
 
     addTask = () => {
         const task = {
             id: uuidv4(),
-            taskDescription: this.state.taskDescription,
+            text: this.state.text,
             completed: false
         }
-        if (this.state.taskDescription === "") {
+        if (this.state.text === "") {
           alert("Enter a task");
          }
         //utilise the function we passed down to this component
         this.props.newTask(task);
 
         //clear out text for UX
-        this.setState({ taskDescription: "" });
+        this.setState({ text: "" });
     }
 
-    taskDescriptionChanged = (event) => {
-        let taskDescription = this.state.taskDescription;
+    textChanged = (event) => {
+        let text = this.state.text;
 
-        taskDescription = event.target.value;
+        text = event.target.value;
 
-        this.setState({ taskDescription });
+        this.setState({ text });
     }
 
 
@@ -46,8 +46,8 @@ class AddTask extends React.Component {
             <div className="row">
                 <div className="col-12">
                     <input className="form control" type="text" id="outlined-full-width" style={{ margin: 8 }} placeholder="Enter your notes here..."
-                        value={this.state.taskDescription}
-                        onChange={this.taskDescriptionChanged} />
+                        value={this.state.text}
+                        onChange={this.textChanged} />
                 </div>
                 <div className="col-md-2">
                     <button type="button" className="btn btn-primary" onClick={this.addTask}>Add</button>
