@@ -2,9 +2,9 @@
   text-align: center;
 }
 body, html {
-  height: 100%;
-  background-image: url("./Images/blue_wish_background.jpg");
-  background-position: span;
+  height: "100%";
+  background-image: url("./Images/green_geometric.jpg");
+  background-position: cover;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

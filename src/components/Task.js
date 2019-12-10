@@ -15,16 +15,16 @@ class Task extends React.Component {
 
         return (
             <div className="row taskRow">
-                {markTaskCompleted && ? (
+                {markTaskCompleted ? (
                     <div className="col-12 col-md-6 completedTask">
                         {this.props.task.text}
                     </div>
                 ) : (
-                ){!markTaskCompleted &&
+                      //  {!markTaskCompleted 
                     <div className="col-12 col-md-6">
-                        {this.props.task.text}
-                    </div>
-                }
+                    {this.props.task.text}
+                </div>
+                )}
                 <div className="col-6 col-md-3">
                     <button type="button" class="btn btn-danger btn-sm" onClick={this.markTaskCompleted}>
                         Done
