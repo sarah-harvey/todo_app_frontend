@@ -5,11 +5,11 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^2.2.0",
     "jquery-confirm": "^3.3.4",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0",
+    "react-scripts": "^3.3.0",
     "uuid": "^3.3.3"
   },
   "scripts": {
