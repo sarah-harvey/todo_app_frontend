@@ -11,7 +11,7 @@ class Task extends React.Component {
     render() {
 
         const markTaskCompleted = this.props.task.completed;
-        //this.props.taskCompletedFunc(this.task.id)       
+               
 
         return (
             <div className="row taskRow">
@@ -20,7 +20,7 @@ class Task extends React.Component {
                         {this.props.task.text}
                     </div>
                 ) : (
-                      //  {!markTaskCompleted 
+                       
                     <div className="col-12 col-md-6">
                     {this.props.task.text}
                 </div>
